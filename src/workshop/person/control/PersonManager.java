@@ -48,11 +48,24 @@ public class PersonManager {
 	public int findByGender(PersonEntity[] persons, char gender) {
 		int genderCnt = 0;
 		for (PersonEntity person : persons) {
+			//char 타입은 primitive 타입으로 값을 비교할때 == 연산자를 사용해도 됨
 			if(person.getGender() == gender) {
 				genderCnt++;
 			}
 		}
 		return genderCnt;
+	}
+	
+	public void showPerson(PersonEntity[] persons, String name) {
+		for (PersonEntity person : persons) {
+			//String은 reference 타입이므로 값을 비교할때 equals() 메서드를 사용해야 함
+			if(person.getName().equals(name)) {
+				System.out.println("[이름] " + person.getName());
+				System.out.println("[성별] " + person.getGender());
+				System.out.println("[전화번호] " + person.getPhone());
+				break;
+			}
+		}
 	}
 	
 }
