@@ -21,7 +21,7 @@ public class Student {
         if (grade >= 1 && grade <= 4) {
             this.grade = grade;
         } else {
-            System.out.println(" 학년은 1~4 사이여야 합니다.");
+            System.out.println("학년(Grade)는 1~4 사이이어야 합니다!!");
         }
     }
 }
