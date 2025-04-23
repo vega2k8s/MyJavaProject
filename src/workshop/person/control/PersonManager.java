@@ -19,7 +19,8 @@ public class PersonManager {
 		mgr.showPersons(persons);
 		
 		System.out.println(mgr.findByGender(persons, '여'));
-				
+		
+		mgr.showPerson(persons, "김하늘");
 	}
 
 	public void showPersons(PersonEntity[] persons) {
@@ -63,6 +64,7 @@ public class PersonManager {
 				System.out.println("[이름] " + person.getName());
 				System.out.println("[성별] " + person.getGender());
 				System.out.println("[전화번호] " + person.getPhone());
+				System.out.println("[주소] " + person.getAddress());
 				break;
 			}
 		}
