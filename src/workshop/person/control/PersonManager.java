@@ -18,7 +18,7 @@ public class PersonManager {
 		
 		mgr.showPersons(persons);
 		
-		System.out.println(mgr.findByGender(persons, '³²'));
+		System.out.println(mgr.findByGender(persons, '¿©'));
 				
 	}
 
@@ -48,9 +48,9 @@ public class PersonManager {
 	public int findByGender(PersonEntity[] persons, char gender) {
 		int genderCnt = 0;
 		for (PersonEntity person : persons) {
-			//if(person.getGender())
-			System.out.println(person.getGender());
-			
+			if(person.getGender() == gender) {
+				genderCnt++;
+			}
 		}
 		return genderCnt;
 	}
