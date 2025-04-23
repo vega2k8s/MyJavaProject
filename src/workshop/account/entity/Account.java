@@ -1,6 +1,6 @@
 package workshop.account.entity;
 
-public class Account {
+public class Account extends Object {
 	private String custId;
 	private String acctId;
 	private int balance;
@@ -49,5 +49,16 @@ public class Account {
 		}
 		this.balance -= amount;
 	}
+	
+	//부모 클래스가 가진 Object의 toString() 메서드를 재정의(Overriding)
+	//Method Signature public String toString()
+	@Override
+	public String toString() {
+		return "Account [custId=" + custId + ", "
+				+ "acctId=" + acctId 
+				+ ", balance=" + balance + "]";
+	}
+	
+
 	
 }
