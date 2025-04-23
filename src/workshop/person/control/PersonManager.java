@@ -12,7 +12,15 @@ public class PersonManager {
 		PersonEntity[] persons = new PersonEntity[2];
 		//Person객체생성
 		//PersonEntity person = new PersonEntity();
+		
+		//PersonEntity배열 초기화 
 		persons[0] = new PersonEntity("이성호","7212121028102", "인천 계양구", "032-392-2932");
+		persons[1] = new PersonEntity("김하늘","7302132363217", "서울 강동구", "02-362-1932");
+		
+		//Enhanced for Loop
+		for (PersonEntity person : persons) {
+			System.out.println(person.getName() + " " + person.getGender() + " " + person.getPhone());
+		}
 		
 	}
 }
