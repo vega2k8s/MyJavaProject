@@ -16,11 +16,15 @@ public class PersonManager {
 		PersonManager mgr = new PersonManager();		
 		mgr.fillPersons(persons);
 		
+		mgr.showPersons(persons);
+				
+	}
+
+	public void showPersons(PersonEntity[] persons) {
 		//Enhanced for Loop
 		for (PersonEntity person : persons) {
 			System.out.println(person.getName() + " " + person.getGender() + " " + person.getPhone());
 		}
-				
 	}
 
 	//non-static method
