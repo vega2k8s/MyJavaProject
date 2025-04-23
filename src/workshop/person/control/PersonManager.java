@@ -47,6 +47,10 @@ public class PersonManager {
 	
 	
 	public int findByGender(PersonEntity[] persons, char gender) {
+//		for (int i = 0; i < persons.length; i++) {
+//			
+//		}
+		
 		int genderCnt = 0;
 		for (PersonEntity person : persons) {
 			//char 타입은 primitive 타입으로 값을 비교할때 == 연산자를 사용해도 됨
