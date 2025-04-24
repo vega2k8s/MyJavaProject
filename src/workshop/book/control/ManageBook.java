@@ -20,19 +20,28 @@ public class ManageBook {
 			System.out.println(publication);
 		}
 		
+		Publication pub2 = pubs[2];
+		System.out.println("=== 가격변경 전 ===");
+		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
+		modifyPrice(pub2);
+		
+		System.out.println("=== 가격변경 후 ===");
+		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
+		
+		
 		//Magazine 객체생성
-		Magazine mz = new Magazine();
+		//Magazine mz = new Magazine();
 		//mz 변수로 호출 가능한 메서드는 5개
-		Publication pub = new Magazine();
+		//Publication pub = new Magazine();
 		//pub 변수로 호출 가능한 메서드 4개
 		
 		//Novel 객체생성
-		Novel novel = new Novel();
-		Publication pub2 = new Novel();
+		//Novel novel = new Novel();
+		//Publication pub2 = new Novel();
 	}//main
 	
 	//다형적 아규먼트(Polymorphic Argument)
-	public void modifyPrice(Publication pub) {
+	public static void modifyPrice(Publication pub) {
 		double rate = 0.0;
 		if(pub instanceof Magazine) {
 			rate = 0.6; //40%
