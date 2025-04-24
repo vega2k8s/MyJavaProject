@@ -28,6 +28,9 @@ public class ManageBook {
 		System.out.println("=== 가격변경 후 ===");
 		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
 		
+		for (Publication publication : pubs) {
+			printSubInfo(publication);
+		}
 		
 		//Magazine 객체생성
 		//Magazine mz = new Magazine();
@@ -38,7 +41,14 @@ public class ManageBook {
 		//Novel 객체생성
 		//Novel novel = new Novel();
 		//Publication pub2 = new Novel();
+				
 	}//main
+	
+	//하위(Sub)클래스들이 단독으로 가지고 있는 정보를 출력하는 메서드
+	public static void printSubInfo(Publication pub) {		
+		Magazine m = (Magazine)pub;
+	}
+	
 	
 	//다형적 아규먼트(Polymorphic Argument)
 	public static void modifyPrice(Publication pub) {
